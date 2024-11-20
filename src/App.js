@@ -30,6 +30,7 @@ export default function Board() {
     function jumpTo(move) {
         setHistory(history.slice(0, move + 1));
         setCurrentSquares(history[move]);
+        setNextIsX(move % 2 === 0);
     }
 
     const moves = history.map((squares, move) => {
